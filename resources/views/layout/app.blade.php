@@ -102,27 +102,22 @@
                       </li>
                       <li>
                           <a href="{{ route('agency') }}" aria-expanded="false"><i class="icon icon-globe-2"></i>
-                              <span  class="nav-text">Instansi</span>
+                              <span  class="nav-text">JKK</span>
                           </a>
                       </li>
                       <li>
-                          <a href="{{ route('sender') }}" aria-expanded="false"><i class="icon icon-layout-25"></i>
-                              <span  class="nav-text">Pengirim</span>
+                          <a href="" aria-expanded="false"><i class="icon icon-layout-25"></i>
+                              <span  class="nav-text">JHT</span>
                           </a>
                       </li>
                       <li>
-                          <a href="{{ route('letter_in') }}" aria-expanded="false"><i class="icon icon-form"></i>
-                              <span  class="nav-text">Surat Masuk</span>
+                          <a href="" aria-expanded="false"><i class="icon icon-form"></i>
+                              <span  class="nav-text">JP</span>
                           </a>
                       </li>
                       <li>
-                          <a href="{{ route('letter_out') }}" aria-expanded="false"><i class="icon icon-form"></i>
-                              <span  class="nav-text">Surat Keluar</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="{{ route('disposisi') }}" aria-expanded="false"><i class="icon icon-single-copy-06"></i>
-                              <span  class="nav-text">Disposisi</span>
+                          <a href="" aria-expanded="false"><i class="icon icon-form"></i>
+                              <span  class="nav-text">JKP</span>
                           </a>
                       </li>
                       <li>

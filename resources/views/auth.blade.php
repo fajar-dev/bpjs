@@ -20,10 +20,10 @@
         </script>
     @endif
 
-<body class="h-100">
+<body class="h-100" style="background-image: url('{{ asset("assets/images/bg.jpg") }}'); background-size: cover;">
     <div class="authincation h-100">
         <div class="container-fluid h-100">
-            <div class="row justify-content-center h-100 align-items-center">
+            <div class="row justify-content-end mr-lg-5 h-100 align-items-center">
                 <div class="col-md-4">
                     <div class="authincation-content">
                         <div class="row no-gutters">
