@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class AgenciesController extends Controller
+class JKKController extends Controller
 {
     public function index()
     {
-        $data = DB::table('agencies')->get();
-        return view('agency', compact('data'));
+        $data = DB::table('jkk')->get();
+        return view('jkk', compact('data'));
     }
 
     public function add(Request $request)
@@ -18,7 +18,7 @@ class AgenciesController extends Controller
         DB::table('agencies')->insert([
             'name' => $request->nama
         ]);
-        return redirect()->route('agency')->with('success','Notes have been added');
+        return redirect()->route('jkk')->with('success','Notes have been added');
     }
 
     public function update(Request $request)
@@ -26,13 +26,13 @@ class AgenciesController extends Controller
         DB::table('agencies')->where('id', $request->id)->update([
             'name' => $request->nama
         ]);
-        return redirect()->route('agency')->with('success','Notes have been added');
+        return redirect()->route('jkk')->with('success','Notes have been added');
     }
 
     public function delete($id)
     {
         DB::table('agencies')->where('id', $id)->delete();
-        return redirect()->route('agency')->with('success','Notes have been added');
+        return redirect()->route('jkk')->with('success','Notes have been added');
 
     }
 }

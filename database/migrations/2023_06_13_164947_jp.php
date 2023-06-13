@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSendersTable extends Migration
+class Jp extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateSendersTable extends Migration
      */
     public function up()
     {
-        Schema::create('senders', function (Blueprint $table) {
+        Schema::create('jp', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('address');
-            $table->string('phone');
-            $table->string('email');
+            $table->string('nama_tenaga_kerja');
+            $table->string('no_kjp');
+            $table->string('status_klime');
+            $table->date('tgl_pengajuan');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateSendersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('senders');
+        Schema::dropIfExists('jp');
     }
 }

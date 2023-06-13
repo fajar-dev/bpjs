@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAgenciesTable extends Migration
+class Jht extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateAgenciesTable extends Migration
      */
     public function up()
     {
-        Schema::create('agencies', function (Blueprint $table) {
+        Schema::create('jht', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nama_tenaga_kerja');
+            $table->string('no_kjp');
+            $table->string('status_klime');
+            $table->date('tgl_pengajuan');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ class CreateAgenciesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agencies');
+        Schema::dropIfExists('jht');
     }
 }

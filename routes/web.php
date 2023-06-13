@@ -1,14 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JKKController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\LetterController;
-use App\Http\Controllers\SenderController;
-use App\Http\Controllers\AgenciesController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\LettersoutController;
-use App\Http\Controllers\DisposisiController;
 use App\Http\Controllers\AccountController;
 
 /*
@@ -27,10 +23,10 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middle
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
-Route::get('/agency', [AgenciesController::class, 'index'])->name('agency')->middleware('auth');
-Route::post('/agency_add', [AgenciesController::class, 'add'])->name('agency_add')->middleware('auth');
-Route::post('/agency_update', [AgenciesController::class, 'update'])->name('agency_update')->middleware('auth');
-Route::get('/agency_delete/{id}', [AgenciesController::class, 'delete'])->name('agency_delete')->middleware('auth');
+Route::get('/jkk', [JKKController::class, 'index'])->name('jkk')->middleware('auth');
+Route::post('/jkk/add', [JKKController::class, 'add'])->name('jkk_add')->middleware('auth');
+Route::post('/jkk/update', [JKKController::class, 'update'])->name('jkk_update')->middleware('auth');
+Route::get('/jkk/delete/{id}', [JKKController::class, 'delete'])->name('jkk_delete')->middleware('auth');
 
 Route::get('/account', [AccountController::class, 'index'])->name('account')->middleware('auth');
 Route::post('/account/update', [AccountController::class, 'update'])->name('account_update')->middleware('auth');

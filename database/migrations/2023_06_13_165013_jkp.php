@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLettersoutsTable extends Migration
+class Jkp extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateLettersoutsTable extends Migration
      */
     public function up()
     {
-        Schema::create('lettersouts', function (Blueprint $table) {
+        Schema::create('jkp', function (Blueprint $table) {
             $table->id();
-            $table->string('letter_no');
-            $table->date('letterout_date');
-            $table->string('regarding');
-            $table->string('purpose');
-            $table->string('letter_file');
-            $table->string('letter_type')->nullable();
+            $table->string('nama_tenaga_kerja');
+            $table->string('no_kjp');
+            $table->string('perusahaan');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateLettersoutsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lettersouts');
+        Schema::dropIfExists('jkp');
     }
 }

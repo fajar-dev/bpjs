@@ -8,7 +8,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-beetwen">
-                                <h4 class="card-title">Data Instansi</h4>
+                                <h4 class="card-title">Data JKK</h4>
                                 <button type="button" class="btn btn-rounded btn-primary" data-toggle="modal" data-target="#basicModal"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
                                 </span>Tambah</button>
                             </div>
@@ -22,7 +22,7 @@
                                                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="{{ route('agency_add') }}" method="POST">
+                                            <form action="{{ route('jkk_add') }}" method="POST">
                                                 @csrf
                                                 <div class="modal-body">
                                                     <div class="form-group">
@@ -46,8 +46,15 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Name</th>
-                                                <th>Price</th>
+                                                <th>Tenaga Kerja</th>
+                                                <th>No KPJ</th>
+                                                <th>Perusahaan</th>
+                                                <th>Tanggal Terima Berkas</th>
+                                                <th>Rumah Sakit</th>
+                                                <th>Jumlah Tagihan</th>
+                                                <th>STMB</th>
+                                                <th>Kekurangan Berkas</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -55,10 +62,17 @@
                                             <?php $no=1 ?>
                                             <tr>
                                                 <th>{{ $no++  }}</th>
-                                                <td>{{ $row->name }}</td>
+                                                <td>{{ $row->nama_tenaga_kerja }}</td>
+                                                <td>{{ $row->no_kjp }}</td>
+                                                <td>{{ $row->perusahaan }}</td>
+                                                <td>{{ $row->tgl_terima_berkas }}</td>
+                                                <td>{{ $row->rs }}</td>
+                                                <td>{{ $row->tagihan }}</td>
+                                                <td>{{ $row->stmb }}</td>
+                                                <td>{{ $row->kekurangan_berkas }}</td>
                                                 <td>
                                                     <a href="" data-toggle="modal" data-target="#edit{{ $row->id }}" class="btn btn-warning">Edit</a>
-                                                    <a href="/agency_delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
+                                                    <a href="/jkk_delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>
 
@@ -71,7 +85,7 @@
                                                                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                                                                 </button>
                                                             </div>
-                                                            <form action="{{ route('agency_update') }}" method="POST">
+                                                            <form action="{{ route('jkk_update') }}" method="POST">
                                                                 @csrf
                                                                 <input type="hidden" name="id" value="{{ $row->id }}">
                                                                 <div class="modal-body">

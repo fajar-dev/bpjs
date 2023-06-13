@@ -101,7 +101,7 @@
                           </a>
                       </li>
                       <li>
-                          <a href="{{ route('agency') }}" aria-expanded="false"><i class="icon icon-globe-2"></i>
+                          <a href="{{ route('jkk') }}" aria-expanded="false"><i class="icon icon-globe-2"></i>
                               <span  class="nav-text">JKK</span>
                           </a>
                       </li>
