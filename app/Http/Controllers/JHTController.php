@@ -13,4 +13,8 @@ class JHTController extends Controller
         return view('jht', compact('data'));
     }
 
+    public function add()
+    {
+        return view('jht_add');
+    }
 }
