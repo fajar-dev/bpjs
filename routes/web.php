@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JHTController;
 use App\Http\Controllers\JKKController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,11 @@ Route::get('/jkk', [JKKController::class, 'index'])->name('jkk')->middleware('au
 Route::post('/jkk/add', [JKKController::class, 'add'])->name('jkk_add')->middleware('auth');
 Route::post('/jkk/update', [JKKController::class, 'update'])->name('jkk_update')->middleware('auth');
 Route::get('/jkk/delete/{id}', [JKKController::class, 'delete'])->name('jkk_delete')->middleware('auth');
+
+Route::get('/jht', [JHTController::class, 'index'])->name('jht')->middleware('auth');
+Route::post('/jht/add', [JHTController::class, 'add'])->name('jht_add')->middleware('auth');
+Route::post('/jht/update', [JHTController::class, 'update'])->name('jht_update')->middleware('auth');
+Route::get('/jht/delete/{id}', [JHTController::class, 'delete'])->name('jht_delete')->middleware('auth');
 
 Route::get('/account', [AccountController::class, 'index'])->name('account')->middleware('auth');
 Route::post('/account/update', [AccountController::class, 'update'])->name('account_update')->middleware('auth');

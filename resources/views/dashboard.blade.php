@@ -18,22 +18,42 @@
                 </div>
             </div>
                 <div class="row">
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="card">
                             <div class="stat-widget-two card-body">
                                 <div class="stat-content">
-                                    <div class="stat-text">Surat Masuk </div>
-                                    <div class="stat-digit">{{ $data['masuk'] }}</div>
+                                    <div class="stat-text">JKK </div>
+                                    <div class="stat-digit">{{ $data['jkk'] }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="card">
                             <div class="stat-widget-two card-body">
                                 <div class="stat-content">
-                                    <div class="stat-text">Surat Keluar</div>
-                                    <div class="stat-digit">{{ $data['keluar'] }}</div>
+                                    <div class="stat-text">JHT</div>
+                                    <div class="stat-digit">{{ $data['jht'] }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-two card-body">
+                                <div class="stat-content">
+                                    <div class="stat-text">JP</div>
+                                    <div class="stat-digit">{{ $data['jp'] }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-two card-body">
+                                <div class="stat-content">
+                                    <div class="stat-text">JKP</div>
+                                    <div class="stat-digit">{{ $data['jkp'] }}</div>
                                 </div>
                             </div>
                         </div>

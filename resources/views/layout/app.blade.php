@@ -106,7 +106,7 @@
                           </a>
                       </li>
                       <li>
-                          <a href="" aria-expanded="false"><i class="icon icon-layout-25"></i>
+                          <a href="{{ route('jht') }}" aria-expanded="false"><i class="icon icon-layout-25"></i>
                               <span  class="nav-text">JHT</span>
                           </a>
                       </li>

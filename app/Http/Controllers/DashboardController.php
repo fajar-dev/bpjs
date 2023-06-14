@@ -9,8 +9,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $data['masuk'] = DB::table('letters')->count();
-        $data['keluar'] = DB::table('lettersouts')->count();
+        $data['jkk'] = DB::table('jkk')->count();
+        $data['jht'] = DB::table('jht')->count();
+        $data['jp'] = DB::table('jp')->count();
+        $data['jkp'] = DB::table('jkp')->count();
         return view('dashboard', compact('data'));
     }
 }
