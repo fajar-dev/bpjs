@@ -12,4 +12,9 @@ class JKPController extends Controller
         $data = DB::table('jkp')->get();
         return view('jkp', compact('data'));
     }
+
+    public function add()
+    {
+        return view('jkp_add');
+    }
 }
