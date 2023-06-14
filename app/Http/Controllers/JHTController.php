@@ -32,7 +32,7 @@ class JHTController extends Controller
 
     public function edit($id)
     {
-        $data = DB::table('jht')->where('id', $id)->get();
+        $data = DB::table('jht')->where('id', $id)->first();
         return view('jht_adit', compact('data'));
     }
 

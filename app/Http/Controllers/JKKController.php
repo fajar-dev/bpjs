@@ -35,7 +35,7 @@ class JKKController extends Controller
 
     public function edit($id)
     {
-        $data = DB::table('jkk')->where('id', $id)->get();
+        $data = DB::table('jkk')->where('id', $id)->first();
         return view('jkk_adit', compact('data'));
     }
 
