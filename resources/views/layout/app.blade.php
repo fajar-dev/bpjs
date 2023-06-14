@@ -111,7 +111,7 @@
                           </a>
                       </li>
                       <li>
-                          <a href="" aria-expanded="false"><i class="icon icon-form"></i>
+                          <a href="{{ route('jp') }}" aria-expanded="false"><i class="icon icon-form"></i>
                               <span  class="nav-text">JP</span>
                           </a>
                       </li>
