@@ -12,4 +12,9 @@ class JPController extends Controller
         $data = DB::table('jp')->get();
         return view('jp', compact('data'));
     }
+
+    public function add()
+    {
+        return view('jp_add');
+    }
 }

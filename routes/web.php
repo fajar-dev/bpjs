@@ -38,7 +38,8 @@ Route::post('/jht/update', [JHTController::class, 'update'])->name('jht_update')
 Route::get('/jht/delete/{id}', [JHTController::class, 'delete'])->name('jht_delete')->middleware('auth');
 
 Route::get('/jp', [JPController::class, 'index'])->name('jp')->middleware('auth');
-Route::post('/jp/add', [JPController::class, 'add'])->name('jp_add')->middleware('auth');
+Route::get('/jp/add', [JPController::class, 'add'])->name('jp_add')->middleware('auth');
+Route::post('/jp/submit', [JPController::class, 'submit'])->name('jp_submit')->middleware('auth');
 Route::post('/jp/update', [JPController::class, 'update'])->name('jp_update')->middleware('auth');
 Route::get('/jp/delete/{id}', [JPController::class, 'delete'])->name('jp_delete')->middleware('auth');
 
