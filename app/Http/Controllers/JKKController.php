@@ -33,9 +33,10 @@ class JKKController extends Controller
         return redirect()->route('jkk')->with('success','1');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('jkk_adit');
+        $data = DB::table('jkk')->where('id', $id)->get();
+        return view('jkk_adit', compact('data'));
     }
 
     public function update(Request $request)

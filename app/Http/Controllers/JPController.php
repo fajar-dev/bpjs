@@ -30,9 +30,10 @@ class JPController extends Controller
         return redirect()->route('jp')->with('success','1');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('jp_adit');
+        $data = DB::table('jp')->where('id', $id)->get();
+        return view('jp_adit', compact('data'));
     }
 
     public function update(Request $request)

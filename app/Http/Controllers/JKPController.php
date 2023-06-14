@@ -29,9 +29,10 @@ class JKPController extends Controller
         return redirect()->route('jkp')->with('success','1');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('jkp_adit');
+        $data = DB::table('jkp')->where('id', $id)->get();
+        return view('jkp_adit', compact('data'));
     }
 
     public function update(Request $request)

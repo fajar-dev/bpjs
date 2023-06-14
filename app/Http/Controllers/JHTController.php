@@ -30,9 +30,10 @@ class JHTController extends Controller
         return redirect()->route('jht')->with('success','1');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('jht_adit');
+        $data = DB::table('jht')->where('id', $id)->get();
+        return view('jht_adit', compact('data'));
     }
 
     public function update(Request $request)
