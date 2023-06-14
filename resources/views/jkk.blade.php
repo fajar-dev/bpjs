@@ -9,36 +9,9 @@
                         <div class="card">
                             <div class="card-header d-flex justify-content-beetwen">
                                 <h4 class="card-title">Data JKK</h4>
-                                <button type="button" class="btn btn-rounded btn-primary" data-toggle="modal" data-target="#basicModal"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
-                                </span>Tambah</button>
+                                <a href="{{ route('jkk_add') }}" class="btn btn-rounded btn-primary"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
+                                </span>Tambah</a>
                             </div>
-
-                            <div class="bootstrap-modal">
-                                <div class="modal fade" id="basicModal">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Tambah Instansi</h5>
-                                                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                                                </button>
-                                            </div>
-                                            <form action="{{ route('jkk_add') }}" method="POST">
-                                                @csrf
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label for="">Nama Instansi</label>
-                                                        <input type="text" class="form-control input-default" name="nama" placeholder="nama instansi" required>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">Save changes</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
 
                             <div class="card-body">
                                 <div class="table-responsive">

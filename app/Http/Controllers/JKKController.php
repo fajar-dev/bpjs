@@ -13,7 +13,12 @@ class JKKController extends Controller
         return view('jkk', compact('data'));
     }
 
-    public function add(Request $request)
+    public function add()
+    {
+        return view('jkk_add');
+    }
+
+    public function submit(Request $request)
     {
         DB::table('agencies')->insert([
             'name' => $request->nama
