@@ -16,7 +16,7 @@ class Jkp extends Migration
         Schema::create('jkp', function (Blueprint $table) {
             $table->id();
             $table->string('nama_tenaga_kerja');
-            $table->string('no_kjp');
+            $table->string('no_kpj');
             $table->string('perusahaan');
             $table->string('keterangan');
             $table->timestamps();

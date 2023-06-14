@@ -63,7 +63,7 @@
                                             <tr>
                                                 <th>{{ $no++  }}</th>
                                                 <td>{{ $row->nama_tenaga_kerja }}</td>
-                                                <td>{{ $row->no_kjp }}</td>
+                                                <td>{{ $row->no_kpj }}</td>
                                                 <td>{{ $row->perusahaan }}</td>
                                                 <td>{{ $row->tgl_terima_berkas }}</td>
                                                 <td>{{ $row->rs }}</td>

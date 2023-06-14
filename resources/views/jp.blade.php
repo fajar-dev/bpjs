@@ -60,7 +60,7 @@
                                             <tr>
                                                 <th>{{ $no++  }}</th>
                                                 <td>{{ $row->nama_tenaga_kerja }}</td>
-                                                <td>{{ $row->no_kjp }}</td>
+                                                <td>{{ $row->no_kpj }}</td>
                                                 <td>{{ $row->status_klime }}</td>
                                                 <td>{{ $row->tgl_pengajuan }}</td>
                                                 <td>{{ $row->keterangan }}</td>

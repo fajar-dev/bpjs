@@ -16,7 +16,7 @@ class CreateJkkTable extends Migration
         Schema::create('jkk', function (Blueprint $table) {
             $table->id();
             $table->string('nama_tenaga_kerja');
-            $table->string('no_kjp');
+            $table->string('no_kpj');
             $table->string('perusahaan');
             $table->date('tgl_terima_berkas');
             $table->string('rs');

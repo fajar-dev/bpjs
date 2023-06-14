@@ -16,7 +16,7 @@ class Jht extends Migration
         Schema::create('jht', function (Blueprint $table) {
             $table->id();
             $table->string('nama_tenaga_kerja');
-            $table->string('no_kjp');
+            $table->string('no_kpj');
             $table->string('status_klime');
             $table->date('tgl_pengajuan');
             $table->string('keterangan');
