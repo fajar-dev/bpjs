@@ -116,7 +116,7 @@
                           </a>
                       </li>
                       <li>
-                          <a href="" aria-expanded="false"><i class="icon icon-form"></i>
+                          <a href="{{ route('jkp') }}" aria-expanded="false"><i class="icon icon-form"></i>
                               <span  class="nav-text">JKP</span>
                           </a>
                       </li>
