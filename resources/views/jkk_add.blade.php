@@ -13,7 +13,7 @@
 
                             <div class="card-body">
                               <div class="basic-form">
-                                <form method="POST" action="{{ route('jkk_add') }}" enctype="multipart/form-data">
+                                <form method="POST" action="{{ route('jkk_submit') }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group row">
                                       <label class="col-sm-2 col-form-label">Nama Tenaga Kerja</label>

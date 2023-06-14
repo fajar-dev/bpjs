@@ -28,6 +28,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/jkk', [JKKController::class, 'index'])->name('jkk')->middleware('auth');
 Route::get('/jkk/add', [JKKController::class, 'add'])->name('jkk_add')->middleware('auth');
+Route::post('/jkk/submit', [JKKController::class, 'submit'])->name('jkk_submit')->middleware('auth');
 Route::post('/jkk/update', [JKKController::class, 'update'])->name('jkk_update')->middleware('auth');
 Route::get('/jkk/delete/{id}', [JKKController::class, 'delete'])->name('jkk_delete')->middleware('auth');
 

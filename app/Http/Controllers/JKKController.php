@@ -20,24 +20,41 @@ class JKKController extends Controller
 
     public function submit(Request $request)
     {
-        DB::table('agencies')->insert([
-            'name' => $request->nama
+        DB::table('jkk')->insert([
+            'nama_tenaga_kerja' => $request->nama_tenaga_kerja,
+            'no_kpj' => $request->no_kpj,
+            'perusahaan' => $request->perusahaan,
+            'tgl_terima_berkas' => $request->tgl_terima_berkas,
+            'rs' => $request->rs,
+            'tagihan' => $request->tagihan,
+            'stmb' => $request->stmb,
+            'kekurangan_berkas' => $request->kekurangan_berkas
         ]);
-        return redirect()->route('jkk')->with('success','Notes have been added');
+        return redirect()->route('jkk')->with('success','1');
+    }
+
+    public function edit()
+    {
+        return view('jkk_adit');
     }
 
     public function update(Request $request)
     {
-        DB::table('agencies')->where('id', $request->id)->update([
-            'name' => $request->nama
+        DB::table('jkk')->where('id', $request->id)->update([
+            'nama_tenaga_kerja' => $request->nama_tenaga_kerja,
+            'no_kpj' => $request->no_kpj,
+            'perusahaan' => $request->perusahaan,
+            'tgl_terima_berkas' => $request->tgl_terima_berkas,
+            'rs' => $request->rs,
+            'tagihan' => $request->tagihan,
+            'stmb' => $request->stmb
         ]);
-        return redirect()->route('jkk')->with('success','Notes have been added');
+        return redirect()->route('jkk')->with('success','1');
     }
 
     public function delete($id)
     {
-        DB::table('agencies')->where('id', $id)->delete();
-        return redirect()->route('jkk')->with('success','Notes have been added');
-
+        DB::table('jkk')->where('id', $id)->delete();
+        return redirect()->route('jkk')->with('success','1');
     }
 }

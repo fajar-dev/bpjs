@@ -17,4 +17,37 @@ class JKPController extends Controller
     {
         return view('jkp_add');
     }
+
+    public function submit(Request $request)
+    {
+        DB::table('jkp')->insert([
+            'nama_tenaga_kerja' => $request->nama_tenaga_kerja,
+            'no_kpj' => $request->no_kpj,
+            'perusahaan' => $request->perusahaan,
+            'keterangan' => $request->keterangan
+        ]);
+        return redirect()->route('jkp')->with('success','1');
+    }
+
+    public function edit()
+    {
+        return view('jkp_adit');
+    }
+
+    public function update(Request $request)
+    {
+        DB::table('jkp')->where('id', $request->id)->update([
+            'nama_tenaga_kerja' => $request->nama_tenaga_kerja,
+            'no_kpj' => $request->no_kpj,
+            'perusahaan' => $request->perusahaan,
+            'keterangan' => $request->keterangan
+        ]);
+        return redirect()->route('jkp')->with('success','1');
+    }
+
+    public function delete($id)
+    {
+        DB::table('jkp')->where('id', $id)->delete();
+        return redirect()->route('jkp')->with('success','1');
+    }
 }
