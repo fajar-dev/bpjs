@@ -32,7 +32,7 @@ class JKPController extends Controller
     public function edit($id)
     {
         $data = DB::table('jkp')->where('id', $id)->first();
-        return view('jkp_adit', compact('data'));
+        return view('jkp_edit', compact('data'));
     }
 
     public function update(Request $request)

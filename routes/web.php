@@ -28,6 +28,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/jkk', [JKKController::class, 'index'])->name('jkk')->middleware('auth');
 Route::get('/jkk/add', [JKKController::class, 'add'])->name('jkk_add')->middleware('auth');
+Route::get('/jkk/edit/{id}', [JKKController::class, 'edit'])->name('jkk_edit')->middleware('auth');
 Route::post('/jkk/submit', [JKKController::class, 'submit'])->name('jkk_submit')->middleware('auth');
 Route::post('/jkk/update', [JKKController::class, 'update'])->name('jkk_update')->middleware('auth');
 Route::get('/jkk/delete/{id}', [JKKController::class, 'delete'])->name('jkk_delete')->middleware('auth');
@@ -35,18 +36,21 @@ Route::get('/jkk/delete/{id}', [JKKController::class, 'delete'])->name('jkk_dele
 Route::get('/jht', [JHTController::class, 'index'])->name('jht')->middleware('auth');
 Route::get('/jht/add', [JHTController::class, 'add'])->name('jht_add')->middleware('auth');
 Route::post('/jht/submit', [JHTController::class, 'submit'])->name('jht_submit')->middleware('auth');
+Route::get('/jht/edit/{id}', [JHTController::class, 'edit'])->name('jht_edit')->middleware('auth');
 Route::post('/jht/update', [JHTController::class, 'update'])->name('jht_update')->middleware('auth');
 Route::get('/jht/delete/{id}', [JHTController::class, 'delete'])->name('jht_delete')->middleware('auth');
 
 Route::get('/jp', [JPController::class, 'index'])->name('jp')->middleware('auth');
 Route::get('/jp/add', [JPController::class, 'add'])->name('jp_add')->middleware('auth');
 Route::post('/jp/submit', [JPController::class, 'submit'])->name('jp_submit')->middleware('auth');
+Route::get('/jp/edit/{id}', [JPController::class, 'edit'])->name('jp_edit')->middleware('auth');
 Route::post('/jp/update', [JPController::class, 'update'])->name('jp_update')->middleware('auth');
 Route::get('/jp/delete/{id}', [JPController::class, 'delete'])->name('jp_delete')->middleware('auth');
 
 Route::get('/jkp', [JKPController::class, 'index'])->name('jkp')->middleware('auth');
 Route::get('/jkp/add', [JKPController::class, 'add'])->name('jkp_add')->middleware('auth');
 Route::post('/jkp/submit', [JKPController::class, 'submit'])->name('jkp_submit')->middleware('auth');
+Route::get('/jkp/edit/{id}', [JKPController::class, 'edit'])->name('jkp_edit')->middleware('auth');
 Route::post('/jkp/update', [JKPController::class, 'update'])->name('jkp_update')->middleware('auth');
 Route::get('/jkp/delete/{id}', [JKPController::class, 'delete'])->name('jkp_delete')->middleware('auth');
 

@@ -38,7 +38,7 @@
                                                 <td>{{ $row->tgl_pengajuan }}</td>
                                                 <td>{{ $row->keterangan }}</td>
                                                 <td>
-                                                    <a href="/jht/edit{{ $row->id }}" class="btn btn-warning">Edit</a>
+                                                    <a href="/jht/edit/{{ $row->id }}" class="btn btn-warning">Edit</a>
                                                     <a href="/jht/delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>

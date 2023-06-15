@@ -32,8 +32,8 @@ class JPController extends Controller
 
     public function edit($id)
     {
-        $data = DB::table('jp')->where('id', $id)->first()
-        return view('jp_adit', compact('data'));
+        $data = DB::table('jp')->where('id', $id)->first();
+        return view('jp_edit', compact('data'));
     }
 
     public function update(Request $request)

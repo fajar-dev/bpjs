@@ -36,7 +36,7 @@ class JKKController extends Controller
     public function edit($id)
     {
         $data = DB::table('jkk')->where('id', $id)->first();
-        return view('jkk_adit', compact('data'));
+        return view('jkk_edit', compact('data'));
     }
 
     public function update(Request $request)
@@ -48,7 +48,8 @@ class JKKController extends Controller
             'tgl_terima_berkas' => $request->tgl_terima_berkas,
             'rs' => $request->rs,
             'tagihan' => $request->tagihan,
-            'stmb' => $request->stmb
+            'stmb' => $request->stmb,
+            'kekurangan_berkas' => $request->kekurangan_berkas
         ]);
         return redirect()->route('jkk')->with('success','1');
     }
