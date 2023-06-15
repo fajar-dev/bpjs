@@ -9,8 +9,12 @@
                         <div class="card">
                             <div class="card-header d-flex justify-content-beetwen">
                                 <h4 class="card-title">Data JKK</h4>
-                                <a href="{{ route('jkk_add') }}" class="btn btn-rounded btn-primary"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
-                                </span>Tambah</a>
+                                <div>
+                                    <a href="{{ route('jkk_cetak') }}" class="btn btn-rounded btn-info text-white mr-3"><span class="btn-icon-left text-info"><i class="fa fa-print color-info"></i>
+                                    </span>Cetak</a>
+                                    <a href="{{ route('jkk_add') }}" class="btn btn-rounded btn-primary"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
+                                    </span>Tambah</a>
+                                </div>
                             </div>
 
                             <div class="card-body">
