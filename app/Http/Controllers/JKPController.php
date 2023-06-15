@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -50,5 +50,12 @@ class JKPController extends Controller
     {
         DB::table('jkp')->where('id', $id)->delete();
         return redirect()->route('jkp')->with('success','1');
+    }
+
+    public function cetak()
+    {
+        $data = DB::table('jkp')->get();
+        $pdf = PDF::loadView('jkp_cetak', compact('data'));
+        return $pdf->stream('document.pdf');
     }
 }

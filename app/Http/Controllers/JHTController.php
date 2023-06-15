@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -52,5 +52,12 @@ class JHTController extends Controller
     {
         DB::table('jht')->where('id', $id)->delete();
         return redirect()->route('jht')->with('success','1');
+    }
+
+    public function cetak()
+    {
+        $data = DB::table('jht')->get();
+        $pdf = PDF::loadView('jht_cetak', compact('data'));
+        return $pdf->stream('document.pdf');
     }
 }
